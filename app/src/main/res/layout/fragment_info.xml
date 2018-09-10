@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nsv_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_repo_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="@dimen/text_large" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_fork_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:textColor="?colorAccent"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="gone" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_repo_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textColor="?android:textColorSecondary"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="gone" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_repo_created_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:textSize="@dimen/text_small"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="64dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_issues_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/text_large" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/issues"
+                                android:textSize="@dimen/text_mini" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_stargazers_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/text_large" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/stargazers"
+                                android:textSize="@dimen/text_mini" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_forks_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/text_large" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/forks"
+                                android:textSize="@dimen/text_mini" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="4dp"
+                            android:layout_weight="1"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_watchers_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textSize="@dimen/text_large" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/watchers"
+                                android:textSize="@dimen/text_mini" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_git_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/git_url"
+                        android:textSize="@dimen/text_medium" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_git_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="@dimen/text_medium" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_ssh_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ssh_url"
+                        android:textSize="@dimen/text_medium" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_ssh_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="@dimen/text_medium" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_clone_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/clone_url"
+                        android:textSize="@dimen/text_medium" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_clone_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:textSize="@dimen/text_medium" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_license"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                app:cardCornerRadius="3dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="10dp"
+                        android:text="@string/license"
+                        android:textSize="@dimen/text_medium" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_key"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/key"
+                        android:textSize="@dimen/text_medium" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/name"
+                        android:textSize="@dimen/text_medium" />
+
+                    <com.app.githubapp.widget.CustomTextViewRegular
+                        android:id="@+id/textview_node_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingEnd="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingTop="5dp"
+                        android:text="@string/node_id"
+                        android:textSize="@dimen/text_medium" />
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageview_sad_cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_sadcloud" />
+
+        <com.app.githubapp.widget.CustomTextViewRegular
+            android:id="@+id/textview_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_sad_cloud"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_info_found" />
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/main_framelayout"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_repositories"
+        android:layout_width="match_parent"
+        android:paddingTop="?attr/actionBarSize"
+        android:clipToPadding="false"
+        android:layout_height="match_parent" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:elevation="5dp"
+        app:theme="@style/ToolbarTheme"
+        app:titleTextColor="@color/white" />
+
+    <RelativeLayout
+        android:id="@+id/rl_no_data_found"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="center_vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imageview_sad_cloud"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_sadcloud" />
+
+        <com.app.githubapp.widget.CustomTextViewRegular
+            android:id="@+id/textview_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageview_sad_cloud"
+            android:layout_centerHorizontal="true"
+            android:text="@string/no_repositories_found" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:fitsSystemWindows="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/off_white"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/colorAccent"
+                android:elevation="5dp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#b3ffffff"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:tabIndicatorColor="@color/white"
+                app:tabMode="fixed" />
+
+            <android.support.v4.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:fillViewport="true">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </android.support.v4.widget.NestedScrollView>
+
+        </LinearLayout>
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/app_bar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:collapsedTitleGravity="left"
+                app:contentScrim="@color/colorPrimary"
+                app:expandedTitleGravity="center_horizontal"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:id="@+id/rl_top_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    app:layout_collapseMode="parallax">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/iv_user_image"
+                        android:layout_width="96dp"
+                        android:layout_height="96dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:src="@drawable/iv_no_user"
+                        app:civ_border_color="@color/white"
+                        app:civ_border_width="2dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_toEndOf="@+id/iv_user_image"
+                        android:orientation="vertical">
+
+                        <com.app.githubapp.widget.CustomTextViewRegular
+                            android:id="@+id/textview_username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:visibility="gone" />
+
+                        <com.app.githubapp.widget.CustomTextViewRegular
+                            android:id="@+id/textview_bio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <com.app.githubapp.widget.CustomTextViewRegular
+                            android:id="@+id/textview_location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                        <com.app.githubapp.widget.CustomTextViewRegular
+                            android:id="@+id/textview_joined_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_parallax_bottom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        android:weightSum="3">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/repositories"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_repositories"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:singleLine="true"
+                                android:text="@string/_0"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/followers"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_followers"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/_0"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/followings"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                            <com.app.githubapp.widget.CustomTextViewRegular
+                                android:id="@+id/textview_followings"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:singleLine="true"
+                                android:text="@string/_0"
+                                android:textColor="@color/white"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <include
+                    layout="@layout/toolbar_transparent"
+                    app:layout_collapseMode="pin" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+</FrameLayout>
+
+    <!--</android.support.design.widget.CoordinatorLayout>-->

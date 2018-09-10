@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">GithubApp</string>
+
+    <string name="hide_text">HIDE</string>
+    <string name="show_text">SHOW</string>
+
+    <string name="no_description_available">No description available</string>
+
+    <!-- Font Awesome -->
+    <string name="fa_star" translatable="false">&#xf005;</string>
+    <string name="fa_network" translatable="false">&#xf126;</string>
+    <string name="fa_circle" translatable="false">&#xf111;</string>
+    <string name="fa_user" translatable="false">&#xf007;</string>
+    <string name="fa_globe" translatable="false">&#xf0ac;</string>
+    <string name="fa_comments" translatable="false">&#xf4a3;</string>
+
+    <string name="built_by">Built by</string>
+    <string name="joined">Joined</string>
+    <string name="description">Description</string>
+
+    <string name="press_back_again_to_exit">Press back again to exit</string>
+    <string name="no_issues_found">No Issues Found</string>
+    <string name="no_commits_found">No Commits Found</string>
+    <string name="api_rate_limit_exceeded">API rate limit exceeded, Try again</string>
+    <string name="no_info_found">No Info Found</string>
+    <string name="repositories">Repositories</string>
+    <string name="_0">0</string>
+    <string name="followers">Followers</string>
+    <string name="followings">Followings</string>
+    <string name="git_repository_is_empty">Git Repository is Empty</string>
+    <string name="no_repositories_found">No Repositories Found</string>
+    <string name="today">Today</string>
+    <string name="this_week">This Week</string>
+    <string name="this_month">This Month</string>
+    <string name="this_year">This Year</string>
+
+    <string name="just_now">just now</string>
+    <string name="seconds_ago">seconds ago</string>
+    <string name="minutes_ago">minutes ago</string>
+    <string name="hours_ago">hours ago</string>
+    <string name="days_ago">days ago</string>
+    <string name="git_url">Git URL</string>
+    <string name="ssh_url">SSH URL</string>
+    <string name="clone_url">Clone URL</string>
+    <string name="watchers">Watchers</string>
+    <string name="forks">Forks</string>
+    <string name="stargazers">Stargazers</string>
+    <string name="issues">Issues</string>
+    <string name="license">License</string>
+    <string name="key">Key : -</string>
+    <string name="name">Name : -</string>
+    <string name="node_id">Node ID : -</string>
+    <string name="issue_number">Issue #</string>
+    <string name="no_language_available">No language available</string>
+
+</resources>
